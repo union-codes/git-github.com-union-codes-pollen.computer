@@ -1,0 +1,164 @@
+body {
+  width: 90%;
+  margin: 3em auto;
+}
+
+
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #fff;
+    z-index: 99;
+    background-color: black;
+
+}
+#status , .preload {
+    width: 20%;
+    height: 20%;
+    position: absolute;
+    left: 40%;
+    top: 40% ;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: 99;
+
+
+}
+
+#bk-1 {  
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: -10;
+
+
+}
+
+
+
+
+
+.doc-wrapper {
+  position: relative;
+  width: 50%;
+  left: 25%;
+
+  -webkit-transition: .5s;
+  -o-transition: .5s;
+  -moz-transition: .5s;
+  transition: .5s;
+}
+.doc-wrapper .doc-button {
+  display: block;
+  width: 13em;
+  padding: .5em 1em;
+  cursor: pointer;
+  margin-top: 1em;
+  margin-left: auto;
+  background-color: rgba(200, 200, 200, 0.5);
+  border-bottom-left-radius: .5em;
+}
+.doc-wrapper pre {
+  padding: 1em 1em 2.5em;
+  background-color: #ccc;
+  margin: 1em 0;
+}
+
+
+/*dotted line on editable content*/
+  [contenteditable="true"] { padding: 10px; outline: 2px dashed #CCC; }
+  [contenteditable="true"]:hover { outline: 2px dashed #0090D2; }
+
+
+
+/*  hover effects: */
+  .st13{fill:#3A3A80;}  /*purple-first*/
+#sq1:hover ~ #backGround {
+    fill: #3A3A80;
+
+}
+
+
+.st6{fill:#285088;}    /*blue-1*/
+#sq2:hover ~ #backGround {
+    fill: #285088;
+
+}
+
+
+.st4{fill:#BD272F;}   /*red*/
+#sq3:hover ~ #backGround {
+    fill: #BD272F;
+
+}
+
+
+.st17{fill:#3A9B4B;}  /*green-1*/
+#sq4:hover ~ #backGround {
+    fill: #3A9B4B;
+
+}
+
+
+.st12{fill:#318EC8;}   /*blue-2*/
+#sq5:hover ~ #backGround {
+    fill: #318EC8;
+
+}
+
+
+.st18{fill:#748846;}  /*green-2*/
+#sq6:hover ~ #backGround {
+    fill: #748846;
+
+}
+
+
+.st7{fill:#F8C537;}    /*yellow*/
+#sq7:hover ~ #backGround {
+    fill: #F8C537;
+
+}
+
+.st3{fill:#EA5C25;}   /*orange*/
+#sq8:hover ~ #backGround {
+    fill: #EA5C25;
+
+}
+
+.red{fill:#BD272F;}   /*red*/
+#sq9:hover ~ #backGround {
+    fill: #BD272F;
+
+}
+
+
+.st1{fill:#E41463;}  /*maroon*/
+#sq10:hover ~ #backGround {
+    fill: #E41463;
+
+}
+
+
+.st8{fill:#5E1F5F;}   /*purple-last*/
+#sq11:hover ~ #backGround {
+    fill: #5E1F5F; 
+
+}
+
+#backGround {
+    
+    -webkit-transition: all 2s ease-out;
+       -moz-transition: all 2s ease-out;
+         -o-transition: all 2s ease-out;
+            transition: all 2s ease-out;
+}
+
+
+/*  end hover effects: */
+
+
