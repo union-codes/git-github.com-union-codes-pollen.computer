@@ -1,3 +1,12 @@
+/*HELPERS:*/
+
+
+.box-shadow  {box-shadow: 0 20px 10px -10px rgba(150, 150, 150, 0.8);}                             /* http://laf.land/projects/shadows/box-shadow/text-shadow.html */
+.drop-shadow {-webkit-filter: drop-shadow(0 0 50px white); filter: drop-shadow(0 0 50px white);}   /* http://laf.land/projects/shadows/drop-shadow.html */
+
+
+
+
 /*detected classes:*/
 
 body.Opera {}
@@ -42,13 +51,38 @@ end FONTS*/
 
 
 
-api going to be 2 things  one css file and one js file
+/*api going to be 2 things  one css file and one js file
 
 
 a set of opeartions performed on the dom such as appeneding the css or dynamic methods
 
 1) css -> for readability 
 2) js  -> cousure --> as in one file or delineated for readability 
+
+*/
+
+
+
+
+
+
+
+
+
+
+
+/*
+
+
+Term One
+
+
+*/
+
+
+
+
+
 
 
 
@@ -88,6 +122,188 @@ a set of opeartions performed on the dom such as appeneding the css or dynamic m
       ::-moz-focus-inner {
       border: 0
       }
+
+
+
+/*
+
+
+Term Two below
+
+
+*/
+
+
+
+html {
+    -ms-touch-action:none
+}
+
+::-moz-focus-inner {
+    border:0
+}
+
+:focus {
+    outline:none
+}
+
+a:focus      {outline:0;}
+img:focus    {outline:0;}  
+button:focus {outline:0;}    /*remove blue border     /* http://stackoverflow.com/questions/20340138  */
+
+
+
+body {
+    border:0;
+    outline:0;
+    padding:0;
+    margin:0;
+    overflow:hidden;   
+    
+    line-height:1;    
+    font-size:16px;
+    font-weight:400;    
+    font-style:normal;
+    font-variant:normal;
+    text-transform:none;
+  
+    vertical-align:baseline; 
+    font-family:Arial,sans-serif;
+    -webkit-font-smoothing:antialiased;    
+    -webkit-text-size-adjust:none;
+    -moz-text-size-adjust:none;
+    -ms-text-size-adjust:none;
+    -o-text-size-adjust:none
+     text-size-adjust:none; 
+
+    -webkit-transform:translateZ(0);
+    -moz-transform:translateZ(0);
+    -ms-transform:translateZ(0);
+    -o-transform:translateZ(0);
+    transform:translateZ(0);
+
+    -webkit-touch-callout:none;
+    -webkit-user-select:none;
+    -moz-user-select:none;
+    -ms-user-select:none;
+    user-select:none;
+
+}
+
+.no-select, .select-none, a, button, img {
+  -webkit-user-select: none;  /* Chrome all / Safari all */
+  -moz-user-select: none;     /* Firefox all */
+  -ms-user-select: none;      /* IE 10+ */
+  user-select: none;          /* Likely future */        /* https://css-tricks.com/almanac/properties/u/user-select/ */
+}
+
+
+
+.cick-select, input {  
+  -webkit-user-select: all;   /* Chrome all / Safari all */
+  -moz-user-select: all;      /* Firefox all */
+  -ms-user-select: all;       /* IE 10+ */
+  user-select: all;           /* Likely future */        /* ttps://css-tricks.com/almanac/properties/u/user-select/ */
+}
+
+.selectable, input, address {
+  -webkit-user-select: initial;  
+  -moz-user-select: initial;    
+  -ms-user-select: initial;     
+  user-select: initial;          
+}
+
+
+
+
+
+/*
+
+SVG LINE ANIMATION SNIPPIT BELOW
+
+*/
+
+  path{
+    fill:none;
+    stroke:currentColor;
+  }
+
+.st0.v1
+  {fill: none;
+  stroke: currentColor;
+  stroke-width: 14px;
+  }
+
+
+
+  .svg-line-animate
+     {
+      stroke-dasharray: 1000;
+      stroke-dashoffset: 1000;
+      -webkit-animation: dash 1.2s linear forwards;
+      -o-animation: dash 1.2s linear forwards;
+      -moz-animation: dash 1.2s linear forwards;
+      animation: dash 1.2s linear forwards;
+
+    
+      -webkit-animation-delay: 0.5s;
+      -o-animation-delay: 0.5s;
+      -moz-animation-delay: 0.5s;
+      animation-delay: 0.5s;
+
+
+    }
+
+
+
+
+
+/*basic svg line drawing:*/
+    @-webkit-keyframes dash {
+      from {
+        stroke-dashoffset: 1000;
+      }
+      to {
+        stroke-dashoffset: 0;
+      }
+    }
+        @-moz-keyframes dash {
+      from {
+        stroke-dashoffset: 1000;
+      }
+      to {
+        stroke-dashoffset: 0;
+      }
+    }
+        @-o-keyframes dash {
+      from {
+        stroke-dashoffset: 1000;
+      }
+      to {
+        stroke-dashoffset: 0;
+      }
+    }
+
+
+
+
+
+/*
+
+END SVG LINE ANIMATION SNIPPIT BELOW
+
+*/
+
+
+
+
+
+
+
+
+
+
+
 
        * {
 /*Last Call on all*/ 
