@@ -1,0 +1,19 @@
+	
+
+ssh: git@github.com:union-codes/pollen.computer.git 
+
+https: (below)  https://github.com/union-codes/pollen.computer.git
+
+
+…or create a new repository on the command line
+
+echo "# pollen.computer" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git remote add origin https://github.com/union-codes/pollen.computer.git
+git push -u origin master
+…or push an existing repository from the command line
+
+git remote add origin https://github.com/union-codes/pollen.computer.git
+git push -u origin master

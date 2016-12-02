@@ -1,0 +1,95 @@
+/*detected classes:*/
+
+body.Opera {}
+	body.Opera {}
+	body.Version {}
+body.MSIE {}
+body.IE {}
+body.Chrome {}
+body.Chrome {}
+body.Safari {}
+	body.Safari {}
+	body.Version {}
+body.Firefox {}
+
+/*FONTS:
+
+http://web.mit.edu/jmorzins/www/fonts.html
+
+The fonts that are most safe to use are:
+
+Arial / Helvetica
+Times New Roman / Times
+Courier New / Courier
+Other options that usually work cross-platform are:
+
+Palatino
+Garamond
+Bookman
+Avant Garde
+Fonts that work on Windows and MacOS but not Unix+X are:
+
+Verdana
+Georgia
+Comic Sans MS
+Trebuchet MS
+Arial Black
+Impact
+
+end FONTS*/
+
+
+
+
+
+api going to be 2 things  one css file and one js file
+
+
+a set of opeartions performed on the dom such as appeneding the css or dynamic methods
+
+1) css -> for readability 
+2) js  -> cousure --> as in one file or delineated for readability 
+
+
+
+    * {
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+      transition: all 1s;
+      }
+
+      body {
+      vertical-align: baseline;
+      border: 0;
+      outline: 0;
+      padding: 0;
+      margin: 0;
+      font-size: 9px;
+      font-style: normal;
+      font-weight: normal;
+      font-variant: normal;
+      text-transform: none;
+      line-height: 1;
+      -webkit-font-smoothing: antialiased;
+      font-family: Arial, Helvetica, sans-serif;
+      overflow: hidden
+      }
+  
+
+
+      html {
+      -ms-touch-action: none
+      }
+
+      :focus {
+      outline: none
+      }
+      ::-moz-focus-inner {
+      border: 0
+      }
+
+       * {
+/*Last Call on all*/ 
+/*absolute bug fixes */
+      }
