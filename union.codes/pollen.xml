@@ -13,6 +13,20 @@ Check for the secure ssl operator on any api fucntion to reference its symbolic 
  <mid></mid> as <obect></obect> or <object-method></object-method>
  <deep></deep> as <chainable-process></chainable-process> -->
 
+
+<!-- example: to parse <top>?</top>  -->
+<var--variable-foo>https://<var--variable-foo>	
+
+<!-- parse: <mid>?</mid> -->
+<var--variable-foo>https://pollen.computer<var--variable-foo>	
+
+<!-- parse: <deep>?</deep> -->
+<var--variable-foo>https://pollen.computer.mutation.technology<var--variable-foo>
+
+
+as in this JS demo of the basic pattern
+
+
 <!-- example: to parse <top>?</top>  -->
 $.getScript(
 <var--variable-foo>https://<var--variable-foo>	
@@ -27,3 +41,53 @@ $.getScript(
 $.getScript(
 <var--variable-foo>https://pollen.computer	
 	.mutation.technology<var--variable-foo>/access.xml)  <!-- example extension -->
+
+
+
+and this leaves a pattern to be accessed by a set of operators: <method></method>
+
+
+<!-- example: to parse <top>?</top>  -->
+$.getScript(
+<var--variable-foo>https://<var--variable-foo>
+
+	<method>pollen.computer.mutation.technology/access.xml</method>)  
+
+<!-- parse: <mid>?</mid> -->
+$.getScript(
+<var--variable-foo>https://pollen.computer<var--variable-foo>	
+
+	<method>.mutation.technology/access.xml</method>)  
+
+<!-- parse: <deep>?</deep> -->
+$.getScript(
+<var--variable-foo>https://pollen.computer	
+
+
+	.mutation.technology<var--variable-foo><method>/access.xml</method>)  
+
+
+
+<!-- the patter of operators is accessed by classes: -->
+https://pollen.computer.(object).(method)/{{(object)}}/{{(object)}}/action.script
+<!-- example: -->
+pollen.computer.stage.emall/{{project}}/{{directory}}  
+
+
+pollen.computer.stage.email/template/newsletter/
+
+<!-- parsable via classes -->
+$.getScript(https://pollen.computer.stage.email),  
+//Or
+$.getScript(https://pollen.computer.mutation.technology/access.xml),
+
+<!-- additional parsing classes example -->
+$.getScript(https://pollen.computer.mutation.technology/access.xml),
+Is $.getScript(https://mutation.technology/access.xml),
+Or $.getScript(mutation.technology/access.xml),
+      $.get mutation.technology/ access
+
+
+
+
+
