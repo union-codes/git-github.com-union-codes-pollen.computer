@@ -1,3 +1,124 @@
+/*CSS VARIABLES:
+Custum Properties
+Tribute to Lea Verou
+
+
+properties with empty prefix*/
+
+.variable-class { 
+background: radial-gradient(
+  transparent calc(100% - var(--corners)),
+  var(--color) 0);
+
+
+--color: blue;
+--corners: 10px;
+
+
+color: var(--color);
+
+}
+
+
+
+
+
+/*convert using calc:
+number --> unit:calc(var(--foo) * 1px)
+unit --> number  (can not)*/
+
+/*set variables only to numbers*/
+
+.bock {
+
+  --size: 6;
+  --side: calc(var(--size) * 1em);
+  width: var(--side);
+  height: var(--size);
+
+}
+
+
+
+/*in animations: */
+@keyframes bg {
+
+  from { background-color: var(--color1); }
+  to { background-color: var(--color2); }
+
+}
+
+
+#animation.side {
+  --color1: yellow;
+  --color2: #0ca;
+  animation: 1s bg infinite alternate;
+}
+
+
+/*in transitions */
+
+#transition.slide {
+  background: var(--bg);
+  --bg: yellow;
+  transition: 1s;
+}
+
+
+#transition.slide:active{
+  --bg: #0ca;
+}
+
+
+
+
+button {
+
+//Lea Verou's default default values
+
+  --col: var(--color, black);
+  border: .1em solid var(--col, black);
+  background: transparent;
+  color: var(--col, black);
+  transition: 1s;
+}
+
+button:hover {
+//background: var(--col);
+  box-shadow: 0 0 0 1em var(--col, black) inset
+  color: white;
+}
+
+/*make a second button*/
+button.pink {
+  --color: #f06;
+}
+
+
+/*<button>CLick Me<button/>
+<button style="--color: blue">CLick Me<button/>
+*/
+
+
+responsive design  instead of having to put code inside media queries just set a variable 
+
+:root {
+  --gutter: 2px;
+}
+
+
+section {
+  margin :var(--gutter);
+}
+
+@media (min-width: 1000px){
+  :root{
+--gutter: 10px;
+}
+}
+
+
+
 /*HELPERS:*/
 
 
