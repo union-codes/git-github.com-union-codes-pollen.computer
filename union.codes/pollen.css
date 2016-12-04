@@ -30,12 +30,10 @@ unit --> number  (can not)*/
 /*set variables only to numbers*/
 
 .bock {
-
   --size: 6;
   --side: calc(var(--size) * 1em);
   width: var(--side);
   height: var(--size);
-
 }
 
 
@@ -74,9 +72,11 @@ unit --> number  (can not)*/
 
 button {
 
-//Lea Verou's default default values
+/*Lea Verou's default default values*/
 
   --col: var(--color, black);
+
+
   border: .1em solid var(--col, black);
   background: transparent;
   color: var(--col, black);
@@ -84,7 +84,7 @@ button {
 }
 
 button:hover {
-//background: var(--col);
+/*background: var(--col);*/
   box-shadow: 0 0 0 1em var(--col, black) inset
   color: white;
 }
@@ -100,7 +100,8 @@ button.pink {
 */
 
 
-responsive design  instead of having to put code inside media queries just set a variable 
+/*responsive design  instead of having to put code inside media queries just set a variable 
+*/
 
 :root {
   --gutter: 2px;
@@ -113,13 +114,97 @@ section {
 
 @media (min-width: 1000px){
   :root{
---gutter: 10px;
+  --gutter: 10px;
 }
 }
 
 
+/*cancel inheritance : set multiple properties at once function curring parameters
+*/
+*{
+  --clip-path: initial;
+  -webkit-clip-path: var(--clip-path);
+  clip-path: var(--clip-path);
+}
 
-/*HELPERS:*/
+.block1 {
+  --clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
+}
+
+
+
+
+/*//create custum properties*/
+
+
+*{
+  --prepend: initial;
+}
+
+::before {
+  content: var(--prepend);
+}
+
+
+div {
+  --prepend: 'yolo';
+}
+
+
+
+/*See pollen .js for JS helpers*/
+
+
+/*detect mouse move */
+
+#mouse.slide {
+background-image: radial-gradient(
+  at calc(100% * var(--mouse-x)) calc(100% * var(--mouse-y))
+  transparent, black);
+
+}
+
+
+/*make an upject follow the mouse 
+*/
+.eyes {
+  cx: calc(25px + 50px * var(--mouse-x));
+}
+
+
+
+@keyframes typing { from { width: 0; } }
+@keyframes caret { 50% { border-color: transparent; } }
+
+
+p.typing {
+  width: calc(var(--length) * 1ch);
+  border-right: 2px solid;
+  overflow: hidden;
+  animation: typing cal(var(--length) * 0.2s) steps(var(--length)),
+  caret .5s step-end infinite alternate;
+
+}
+
+
+.scrolling {
+  background-image: linear-gradient(to right, 
+    white calc(100% * var(--scroll), transparent 0))
+}
+
+/*progress bar at top*/
+.scrolling.progress {
+  background-image: linear-gradient(to right, 
+    red calc(100% * var(--scroll), white 0))
+  background-size: 100% 1em;
+}
+
+
+
+
+/* end css variable code from Lea's demo */
+
+/* CSS HELPERS:*/
 
 
 .box-shadow  {box-shadow: 0 20px 10px -10px rgba(150, 150, 150, 0.8);}                             /* http://laf.land/projects/shadows/box-shadow/text-shadow.html */
