@@ -2,7 +2,7 @@
 Custum Properties
 Tribute to Lea Verou
 
-
+CSS VARIABLES : 
 properties with empty prefix*/
 
 .variable-class { 
@@ -10,25 +10,22 @@ background: radial-gradient(
   transparent calc(100% - var(--corners)),
   var(--color) 0);
 
-
 --color: blue;
 --corners: 10px;
-
 
 color: var(--color);
 
 }
 
 
-
-
+/* USE CASES */
+/* CSS VARIABLES : calc */
 
 /*convert using calc:
 number --> unit:calc(var(--foo) * 1px)
 unit --> number  (can not)*/
 
 /*set variables only to numbers*/
-
 .bock {
   --size: 6;
   --side: calc(var(--size) * 1em);
@@ -37,15 +34,60 @@ unit --> number  (can not)*/
 }
 
 
+/* CSS VARIABLES : 
+RESPONSIVE DESIGN  instead of having to put code inside media queries just set a variable */
+:root {
+  --gutter: 2px;
+}
 
-/*in animations: */
+section {
+  margin :var(--gutter);
+}
+
+@media (min-width: 1000px){
+  :root{
+  --gutter: 10px;
+  }
+}
+
+
+/* CSS VARIABLES : 
+cancel inheritance : 
+set multiple properties at once 
+function curring parameters */
+*{
+  --clip-path: initial;
+  -webkit-clip-path: var(--clip-path);
+  clip-path: var(--clip-path);
+}
+
+.block1 {
+  --clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
+}
+
+
+/*CSS VARIABLES :
+create custum properties*/
+*{
+  --prepend: initial;
+}
+
+::before {
+  content: var(--prepend);
+}
+
+div {
+  --prepend: 'yolo';
+}
+
+
+/*CSS VARIABLES : animations: */
 @keyframes bg {
 
   from { background-color: var(--color1); }
   to { background-color: var(--color2); }
 
 }
-
 
 #animation.side {
   --color1: yellow;
@@ -54,28 +96,20 @@ unit --> number  (can not)*/
 }
 
 
-/*in transitions */
-
+/*CSS VARIABLES : transitions */
 #transition.slide {
   background: var(--bg);
   --bg: yellow;
   transition: 1s;
 }
 
-
 #transition.slide:active{
   --bg: #0ca;
 }
 
-
-
-
 button {
-
 /*Lea Verou's default default values*/
-
   --col: var(--color, black);
-
 
   border: .1em solid var(--col, black);
   background: transparent;
@@ -88,104 +122,34 @@ button:hover {
   box-shadow: 0 0 0 1em var(--col, black) inset
   color: white;
 }
-
 /*make a second button*/
 button.pink {
   --color: #f06;
 }
-
 
 /*<button>CLick Me<button/>
 <button style="--color: blue">CLick Me<button/>
 */
 
 
-/*responsive design  instead of having to put code inside media queries just set a variable 
-*/
-
-:root {
-  --gutter: 2px;
-}
+CSS VARIABLES with JS
+/* BELOW : See pollen.js for JS helpers*/
 
 
-section {
-  margin :var(--gutter);
-}
-
-@media (min-width: 1000px){
-  :root{
-  --gutter: 10px;
-}
-}
-
-
-/*cancel inheritance : set multiple properties at once function curring parameters
-*/
-*{
-  --clip-path: initial;
-  -webkit-clip-path: var(--clip-path);
-  clip-path: var(--clip-path);
-}
-
-.block1 {
-  --clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
-}
-
-
-
-
-/*//create custum properties*/
-
-
-*{
-  --prepend: initial;
-}
-
-::before {
-  content: var(--prepend);
-}
-
-
-div {
-  --prepend: 'yolo';
-}
-
-
-
-/*See pollen .js for JS helpers*/
-
-
-/*detect mouse move */
+/* CSS VARIABLES : detect mouse move */
 
 #mouse.slide {
 background-image: radial-gradient(
   at calc(100% * var(--mouse-x)) calc(100% * var(--mouse-y))
   transparent, black);
-
 }
 
-
-/*make an upject follow the mouse 
-*/
+/*make an upject follow the mouse */
 .eyes {
   cx: calc(25px + 50px * var(--mouse-x));
 }
 
-
-
-@keyframes typing { from { width: 0; } }
-@keyframes caret { 50% { border-color: transparent; } }
-
-
-p.typing {
-  width: calc(var(--length) * 1ch);
-  border-right: 2px solid;
-  overflow: hidden;
-  animation: typing cal(var(--length) * 0.2s) steps(var(--length)),
-  caret .5s step-end infinite alternate;
-
-}
-
+/* CSS VARIABLES : detect scrolling*/
 
 .scrolling {
   background-image: linear-gradient(to right, 
@@ -200,20 +164,34 @@ p.typing {
 }
 
 
+/* CSS VARIABLES : 
+typing effect */
+
+@keyframes typing { from { width: 0; } }
+@keyframes caret { 50% { border-color: transparent; } }
+
+p.typing {
+  width: calc(var(--length) * 1ch);
+  border-right: 2px solid;
+  overflow: hidden;
+  animation: typing cal(var(--length) * 0.2s) steps(var(--length)),
+  caret .5s step-end infinite alternate;
+}
 
 
 /* end css variable code from Lea's demo */
 
+
+
+
 /* CSS HELPERS:*/
-
-
 .box-shadow  {box-shadow: 0 20px 10px -10px rgba(150, 150, 150, 0.8);}                             /* http://laf.land/projects/shadows/box-shadow/text-shadow.html */
 .drop-shadow {-webkit-filter: drop-shadow(0 0 50px white); filter: drop-shadow(0 0 50px white);}   /* http://laf.land/projects/shadows/drop-shadow.html */
 
 
 
 
-/*detected classes:*/
+/*Browser detected classes: See apply.js*/
 
 body.Opera {}
 	body.Opera {}
@@ -227,9 +205,10 @@ body.Safari {}
 	body.Version {}
 body.Firefox {}
 
-/*FONTS:
 
-http://web.mit.edu/jmorzins/www/fonts.html
+
+
+/*FONTS:  http://web.mit.edu/jmorzins/www/fonts.html
 
 The fonts that are most safe to use are:
 
@@ -252,6 +231,8 @@ Arial Black
 Impact
 
 end FONTS*/
+
+
 
 
 
