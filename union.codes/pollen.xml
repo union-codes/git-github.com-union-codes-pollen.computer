@@ -1,0 +1,29 @@
+
+<!-- Basic Pattern:
+ -->
+ <object>pollen.
+ 	<locationObject>/pollen</locationObject>
+ 	<variable>{{.script}}</variable>
+ </object>
+
+
+<!-- Basic JS integration:
+Check for the secure ssl operator on any api fucntion to reference its symbolic level reference:
+ <top></top> as <service></service>
+ <mid></mid> as <obect></obect> or <object-method></object-method>
+ <deep></deep> as <chainable-process></chainable-process> -->
+
+<!-- example: to parse <top>?</top>  -->
+$.getScript(
+<var--variable-foo>https://<var--variable-foo>	
+	pollen.computer.mutation.technology/access.xml)  <!-- example extension -->
+
+<!-- parse: <mid>?</mid> -->
+$.getScript(
+<var--variable-foo>https://pollen.computer<var--variable-foo>	
+	.mutation.technology/access.xml)  <!-- example extension -->
+
+<!-- parse: <deep>?</deep> -->
+$.getScript(
+<var--variable-foo>https://pollen.computer	
+	.mutation.technology<var--variable-foo>/access.xml)  <!-- example extension -->
