@@ -1,6 +1,41 @@
 
+// sensable defaults
+// >
+// double negatives
+// >
+// true by default
+
+// make the simple easy and the comlex possible
+// names should describe what is does not how it works
+
+// es6 proxies 
+// //returning undefined is wasteful! : use chainvas http://lea.verou.me/chainvas/
+
+// doing mass on scale 
 
 // URL constructor pattern:
+
+
+
+
+
+
+
+
+
+ // object is a colleciton of properties
+
+ // a propertiy is association between a key and a value
+
+ // a propery with a value that is a function is called a method 
+
+
+
+
+
+
+
+
 url = new URL(urlString, [baseURLstring])
 url = new URL(urlString, baseURLobject)
 
@@ -22,12 +57,16 @@ var k = new URL('http://www.example.com', 'https://developers.mozilla.com');
 var l = new URL('http://www.example.com', b);          // Creates a URL pointing to 'http://www.example.com/'
 
 
+fetch("https://pollen.computer.json")
+ .then(responce => responce.json())
+ .then(doStuff);
+
 
 
 // URL methods
-constructor:  URL()
-properties:  origin
-			 searchParams
+// constructor:  URL()
+// properties:  origin
+// 			 searchParams
 methods: 			 
 	URLUtils.toString()
 	URLUtils.href  // Returns a DOMString containing the whole URL. It is a synonym for URLUtils.href, it can't be used to modify the value.
@@ -36,6 +75,46 @@ methods:
 		URL.revokeObjectURL()
 
 additional:
+
+
+Layered API:
+
+(outerlayers)(innerlayers)(outerlayers)
+
+
+
+
+upper is the parse function 
+
+downer is the distribution fucntion  (the realizer parse)
+
+inner a method 
+
+
+
+function(
+inner) {
+	upper function();
+}) {
+
+	inner.prototype.
+
+	downer, prototype {prototype, function();}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 redular expressions
@@ -204,11 +283,39 @@ intension.cloud
 internsion.press
 
 
+Access these via 
+
+{{}}.attribute
+component.{{}}
+
+//giving a pattern:  
+
+{{component}}.attribute 
+component.{{attribute}}
+
+//or even
+
+{{component.attribute}}.attribute 
+//as in 
+
+{{}}.{{}}.attribute  
+//eg are chaniable:
+
+creating a universal {{}}.{{}}.{{}}.{{}} 
+//method where the value of the innter bracked is the product of operation parameters
 
 
+//this can create the unique attribute.component event 
+//as in
+//normal pattern of object.attribute
+object.computer.object.computer
 
+// unique or regular ? {{}}.attribute.component.{{}}
+object.computer.pollen.object
 
+{{}}.attribute.component.{{}}
 
+//there should never be the case:  object.computer.computer.object in this long form notation (where there are 2 adjacent terms) because in long form no single entity exists as both an attribute and component.
 
 
 //create custum CSS properties  see pollen.css
